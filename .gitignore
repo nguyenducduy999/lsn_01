@@ -106,4 +106,11 @@ config/settings.local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml
 config/settings/
-
+.framgia-ci-reports/
+.framgia-ci-result.temp.yml
+.framgia-ci.yml
+.rubocop.yml
+.rubocop_disabled.yml
+.rubocop_enabled.yml
+.scss-lint.yml
+/test/*
