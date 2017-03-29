@@ -6,14 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-10.times do
-  question = Question.find_by id: 1
-  content = Faker::Lorem.sentence(5)
-  vote_count = Faker::Number.between(0,10)
-  user_id = Faker::Number.between(1,10)
-  question.answers.create(content: content,
-    vote_count: vote_count, user_id: user_id)
-end
+
 
 99.times do |n|
   name = Faker::Name.name
@@ -56,4 +49,13 @@ end
   user_id: user,
   vote_count: votes
   )
+end
+
+10.times do
+  question = Question.find_by id: 1
+  content = Faker::Lorem.sentence(5)
+  vote_count = Faker::Number.between(0,10)
+  user_id = Faker::Number.between(1,10)
+  question.answers.create(content: content,
+    vote_count: vote_count, user_id: user_id)
 end

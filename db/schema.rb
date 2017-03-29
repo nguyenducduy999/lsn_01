@@ -36,8 +36,7 @@ ActiveRecord::Schema.define(version: 20170402104723) do
     t.integer "ancestor_id",   null: false
     t.integer "descendant_id", null: false
     t.integer "generations",   null: false
-    t.index ["ancestor_id", "descendant_id", "generations"],
-      name: "category_anc_desc_idx", unique: true
+    t.index ["ancestor_id", "descendant_id", "generations"], name: "category_anc_desc_idx", unique: true
     t.index ["descendant_id"], name: "category_desc_idx"
   end
 
@@ -73,8 +72,7 @@ ActiveRecord::Schema.define(version: 20170402104723) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["question_id"], name: "index_reports_on_question_id"
-    t.index ["user_id", "question_id"],
-      name: "index_reports_on_user_id_and_question_id", unique: true
+    t.index ["user_id", "question_id"], name: "index_reports_on_user_id_and_question_id", unique: true
     t.index ["user_id"], name: "index_reports_on_user_id"
   end
 
@@ -82,10 +80,21 @@ ActiveRecord::Schema.define(version: 20170402104723) do
     t.string   "username"
     t.string   "email"
     t.string   "password"
-    t.boolean  "is_admin",   default: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.boolean  "is_admin",               default: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.string   "encrypted_password",     default: "",    null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,     null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
     t.integer  "vote_count"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   create_table "votes", force: :cascade do |t|
@@ -95,8 +104,6 @@ ActiveRecord::Schema.define(version: 20170402104723) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.index ["user_id"], name: "index_votes_on_user_id"
-    t.index ["votable_type", "votable_id"],
-      name: "index_votes_on_votable_type_and_votable_id"
+    t.index ["votable_type", "votable_id"], name: "index_votes_on_votable_type_and_votable_id"
   end
-
 end
