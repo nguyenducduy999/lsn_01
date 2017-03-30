@@ -1,0 +1,30 @@
+<div class="topic-title">
+  <div class="container">
+    <h4>
+      <%= link_to "#" do %>
+        <%= @question.title %>
+      <% end %>
+    </h4>
+  </div>
+</div>
+<div class="container-question">
+  <%= render @question %>
+</div>
+<div class="count-answer">
+  <h5>
+    <span><%= @answers.count() %></span>
+    <%= t "answer_count" %>
+  </h5>
+</div>
+<div class="container-answers">
+  <%= render @answers %>
+</div>
+<div class="button-add-answer">
+  <%= link_to "#create_answer",
+    class:"btn-floating btn-large waves-effect waves-light red" do %>
+    <%= content_tag :i, "mode_edit", class: "material-icons" %>
+  <% end %>
+</div>
+
+<dir id="create_answer" class="create_answer">
+</dir>

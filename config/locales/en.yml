@@ -22,3 +22,9 @@
 en:
   hello: "Hello world"
   socsialLearing: "SocsialLearing"
+  fake:
+    point: "500"
+  add_answer: "add a answer"
+  report: "Report"
+  add_comment: "add a comment"
+  answer_count: "Answer"

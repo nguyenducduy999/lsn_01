@@ -1,0 +1,41 @@
+<table>
+  <tr>
+    <td class="vote">
+      <%= link_to "#" do %>
+        <i class="material-icons" %>add</i>
+      <% end %>
+      <div class="vote-point">+<%= answer.vote_count %></div>
+      <%= link_to "#" do %>
+        <i class="material-icons" %>remove</i>
+      <% end %>
+    </td>
+    <td class="collection">
+      <div class="collection-item avatar">
+        <%= image_tag "yuna.jpg", class: "circle" %>
+        <span class="title"><%= answer.user.username %></span><br>
+        <span><%= t "fake.point" %></span>
+        <span class="medal">
+          <%= image_tag "gold-medal.png", alt: "medal" %>
+        </span>
+        <div class="content_answer">
+          <p>
+            <%= answer.content %>
+          </p>
+          <div class="container-comments">
+
+          </div>
+        </div>
+        <div class="secondary-content">
+          <span><%= answer.created_at %></span>
+        </div>
+        <table class="question-footer">
+          <tr>
+            <td class="add-comment">
+              <%= link_to t("add_comment"), "#" %>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+</table>

@@ -1,2 +1,84 @@
-@import "materialize";
-@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import 'materialize';
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
+$red: #f00;
+
+// question page
+.medal {
+  margin-left: 5px;
+  margin-right: 3px;
+
+  img {
+    height: 20px;
+    width: auto;
+  }
+}
+
+.question-footer {
+  .add-comment {
+    margin-top: 30px;
+  }
+
+  .report {
+    text-align: right;
+
+    a:hover {
+      color: $red;
+    }
+
+    i {
+      font-size: 16px;
+    }
+
+    span {
+      font-size: 19px;
+    }
+  }
+}
+
+.container-question {
+  .vote {
+    font-size: 30px;
+    max-width: 75px;
+    width: 10%;
+
+    i {
+      font-size: 40px;
+    }
+  }
+}
+
+.container-answers {
+  padding-left: 50px;
+  padding-right: 10px;
+
+  .vote {
+    font-size: 22px;
+    max-width: 75px;
+    width: 10%;
+
+    i {
+      font-size: 30px;
+    }
+  }
+}
+
+.container-comments {
+  padding-left: 60px;
+
+  .vote {
+    font-size: 22px;
+
+    i {
+      font-size: 30px;
+    }
+  }
+}
+
+.button-add-answer {
+  height: 18em;
+  left: 95%;
+  position: fixed;
+  top: 50%;
+  width: 30em;
+}
