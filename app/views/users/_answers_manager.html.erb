@@ -1,0 +1,23 @@
+<div class="nav-content answers-manager-profile">
+  <ul class="tabs">
+    <li class="tab disabled">
+      <%= link_to t("answers"), "#" %>
+    </li>
+    <li class="tab right-side">
+      <%= link_to t("newest"), "#answer_newest", class: "active" %>
+    </li>
+    <li class="tab right-side">
+      <%= link_to t("votest"), "#answer_votest" %>
+    </li>
+  </ul>
+</div>
+<div id="answer_newest" class="col s12 collection">
+  <% @supports.newest_answers.each do |answer| %>
+    <%= render "shared/answer", answer: answer %>
+  <% end %>
+</div>
+<div id="answer_votest" class="col s12 collection">
+  <% @supports.votest_answers.each do |answer| %>
+    <%= render "shared/answer", answer: answer %>
+  <% end %>
+</div>

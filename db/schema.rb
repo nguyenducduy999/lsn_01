@@ -106,4 +106,5 @@ ActiveRecord::Schema.define(version: 20170402104723) do
     t.index ["user_id"], name: "index_votes_on_user_id"
     t.index ["votable_type", "votable_id"], name: "index_votes_on_votable_type_and_votable_id"
   end
+
 end

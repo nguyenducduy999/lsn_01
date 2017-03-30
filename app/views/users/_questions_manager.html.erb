@@ -1,0 +1,23 @@
+<div class="nav-content questions-manager-profile">
+  <ul class="tabs">
+    <li class="tab disabled">
+      <%= link_to t("questions"), "#" %>
+    </li>
+    <li class="tab right-side">
+      <%= link_to t("newest"), "#question_newest", class: "active" %>
+    </li>
+    <li class="tab right-side">
+      <%= link_to t("votest"), "#question_votest" %>
+    </li>
+  </ul>
+</div>
+<div id="question_newest" class="col s12 collection">
+  <% @supports.newest_questions.each do |post| %>
+    <%= render "shared/post", post: post %>
+  <% end %>
+</div>
+<div id="question_votest" class="col s12 collection">
+  <% @supports.votest_questions.each do |post| %>
+    <%= render "shared/post", post: post %>
+  <% end %>
+</div>

@@ -1,0 +1,62 @@
+<nav class="nav-extended profile-nav">
+  <div class="nav-content">
+    <ul class="tabs tabs-transparent">
+      <li class="tab">
+        <%= link_to t("profile"), "#profile", class: "active" %>
+      </li>
+      <li class="tab">
+        <%= link_to t("activity"), "#activity" %>
+      </li>
+      <li class="tab user">
+        <%= link_to "#" do %>
+          <%= @user.username %>
+          <%= image_tag "avatar.png", class: "circle" %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div id="profile" class="col s12 profile">
+  <div class="collection">
+    <div class="collection-item">
+      <%= image_tag "avatar.png", class: "avatar" %>
+      <div class="content-profile">
+        <span class="title"><%= @user.username %></span><br>
+        <span><%= t "fake.point" %></span>
+        <span class="medal">
+          <%= image_tag "gold-medal.png", alt: "medal" %>
+        </span>
+      </div>
+      <div class="score">
+        <table>
+          <tr>
+            <th><%= @user.answers.count %><br><%= t "number_answer" %></th>
+            <th><%= @user.questions.count %><br><%= t "number_question" %></th>
+            <th><%= t "fake.reached" %><br><%= t "number_people_reached" %></th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="collection">
+    <p><%= t "top_post" %></p>
+    <% @supports.top_posts.each do |post| %>
+      <%= render "shared/post", post: post %>
+    <% end %>
+  </div>
+  <div class="collection badges">
+    <p><%= t "badges" %></p>
+    <%= render "shared/badges" %>
+  </div>
+</div>
+<div id="activity" class="col s12 activity">
+  <div class="statistic_graphic">
+    <%= image_tag "graphic.png" %>
+  </div>
+  <div class="questions-manager">
+    <%= render "questions_manager" %>
+  </div>
+  <div class="answers-manager">
+    <%= render "answers_manager" %>
+  </div>
+</div>

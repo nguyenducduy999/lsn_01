@@ -114,3 +114,4 @@ config/settings/
 .rubocop_enabled.yml
 .scss-lint.yml
 /test/*
+.look-*
