@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170328123906) do
+ActiveRecord::Schema.define(version: 20170402104723) do
 
   create_table "answers", force: :cascade do |t|
     t.integer  "question_id"
@@ -30,6 +30,15 @@ ActiveRecord::Schema.define(version: 20170328123906) do
     t.integer  "parent_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "category_hierarchies", id: false, force: :cascade do |t|
+    t.integer "ancestor_id",   null: false
+    t.integer "descendant_id", null: false
+    t.integer "generations",   null: false
+    t.index ["ancestor_id", "descendant_id", "generations"],
+      name: "category_anc_desc_idx", unique: true
+    t.index ["descendant_id"], name: "category_desc_idx"
   end
 
   create_table "notifications", force: :cascade do |t|
@@ -64,7 +73,8 @@ ActiveRecord::Schema.define(version: 20170328123906) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["question_id"], name: "index_reports_on_question_id"
-    t.index ["user_id", "question_id"], name: "index_reports_on_user_id_and_question_id", unique: true
+    t.index ["user_id", "question_id"],
+      name: "index_reports_on_user_id_and_question_id", unique: true
     t.index ["user_id"], name: "index_reports_on_user_id"
   end
 
@@ -75,6 +85,7 @@ ActiveRecord::Schema.define(version: 20170328123906) do
     t.boolean  "is_admin",   default: false
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+    t.integer  "vote_count"
   end
 
   create_table "votes", force: :cascade do |t|
@@ -84,7 +95,8 @@ ActiveRecord::Schema.define(version: 20170328123906) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.index ["user_id"], name: "index_votes_on_user_id"
-    t.index ["votable_type", "votable_id"], name: "index_votes_on_votable_type_and_votable_id"
+    t.index ["votable_type", "votable_id"],
+      name: "index_votes_on_votable_type_and_votable_id"
   end
 
 end

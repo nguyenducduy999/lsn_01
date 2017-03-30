@@ -15,3 +15,15 @@
 //= require turbolinks
 //= require_tree .
 //= require materialize-sprockets
+$(document).ready(function(){
+  $('.dropdown-button').dropdown();
+});
+
+$(document).ready(function(){
+  $('.left-sitebar .list-class .class-item').on('click',function(){
+    $('.left-sitebar .list-class .class-item').css('width','33.3333333333%');
+    $('.left-sitebar .list-class .class-item').find('.row').css('display','none');
+    $(this).css('width','100%');
+    $(this).find('.row').css('display','block');
+  });
+});

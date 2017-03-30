@@ -1,0 +1,35 @@
+<div class="card hot-user">
+  <div class="card-panel teal lighten-2 margin-0">
+    <%= t "button.top_user" %>
+  </div>
+  <ul class="collection margin-0">
+    <% @supports.hot_user.each do |user| %>
+      <li class="collection-item avatar">
+        <img src="https://cdn.pixabay.com/photo/2016/08/20/05/38/avatar-1606916_
+          960_720.png" alt="" class="circle">
+        <span class="title"><%= link_to user.username, "#" %> </span>
+        <p class="group-count">
+          <i class="material-icons"><%= t "text.grade" %></i>
+          <strong><%= user.vote_count %></strong>
+        </p>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<div class="card hot-question">
+  <div class="card-panel teal lighten-2 margin-0">
+    <%= t "button.top_question" %>
+  </div>
+  <ul class="collection margin-0">
+    <% @supports.hot_question.each do |question| %>
+      <li class="collection-item">
+        <p><%= question.content %></p>
+        <p><%= link_to question.user.username, "#" %></p>
+        <p class="group-count">
+          <i class="material-icons"><%= t "text.thumb_up" %></i>
+          <strong><%= question.vote_count %></strong>
+        </p>
+      </li>
+    <% end %>
+  </ul>
+</div>
