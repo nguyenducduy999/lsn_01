@@ -1,0 +1,25 @@
+vi:
+  devise:
+    failure:
+      already_authenticated: "Bạn đã đăng nhập."
+      invalid: "%{authentication_keys} hoặc mật khẩu không hợp lệ"
+      not_found_in_database: "%{authentication_keys} hoặc mật khẩu không hợp lệ"
+      unauthenticated: "Bạn cần đăng nhập hoặc đăng ký trước khi tiếp tục."
+      failure: Không thể xác thực %{kind} bởi vì \"%{reason}\""
+      success: "Đã xác thực thành công."
+    passwords:
+      updated: "Mật khẩu của bạn đã được thay đổi thành công. Bây giờ bạn đã đăng nhập."
+      updated_not_active: "Mật khẩu của bạn đã được thay đổi thành công.."
+    registrations:
+      signed_up: "Chào mừng bạn! Bạn đã đăng ký thành công"
+      updated: "Tài khoản của bạn đã được cập nhật thành công."
+    sessions:
+      signed_in: "Đã đăng nhập thành công."
+      signed_out: "Đăng xuất thành công."
+      already_signed_out: "Đăng xuất thành công."
+  errors:
+    messages:
+      not_found: "không tìm thấy"
+      not_saved:
+        one: "1 lỗi đã ngăn không cho %{resource} được lưu lại::"
+        other: "%{count} Lỗi đã ngăn không cho %{resource} này được lưu:"

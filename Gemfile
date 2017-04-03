@@ -16,6 +16,7 @@ gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 gem "config"
 gem "faker", "1.6.6"
+gem "devise"
 
 group :development, :test do
   gem "byebug", platform: :mri
