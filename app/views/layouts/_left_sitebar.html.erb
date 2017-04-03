@@ -1,0 +1,32 @@
+<div class="card-panel teal lighten-2">
+  <%= t "button.create_question" %>
+</div>
+<div class="card-panel teal lighten-2">
+  <%= t "button.find_by_class" %>
+</div>
+<div class="row list-class" >
+  <% @supports.list_class.each do |c| %>
+    <div class="col m4 class-item">
+      <div class="card">
+        <div class="card-panel blue"><%= c.name %></div>
+        <div class="row">
+          <% c.descendants.each do |descendant| %>
+            <div class="col m4 ">
+              <div class="card-panel grey"><%= descendant.name %></div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<div class="card-panel teal lighten-2">
+  <%= t "button.find_by_object" %>
+</div>
+<div class="row list-class">
+  <% @supports.list_object.each do |object| %>
+    <div class="col m4">
+      <div class="card-panel blue"><%= object %></div>
+    </div>
+  <% end %>
+</div>

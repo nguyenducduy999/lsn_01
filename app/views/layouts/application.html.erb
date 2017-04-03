@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%=t "SocsialLearing"%></title>
+    <title><%= t "socsialLearing" %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag "application", media: "all",
@@ -11,6 +11,9 @@
   </head>
 
   <body>
+    <%= render "layouts/header" %>
+    <div class="header-height"></div>
     <%= yield %>
+    <%= render "layouts/footer" %>
   </body>
 </html>

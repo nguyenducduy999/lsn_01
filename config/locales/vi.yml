@@ -1,0 +1,34 @@
+vi:
+  socsialLearing: "Mang hoi dap hoc tap"
+  button:
+    create_question: "Gui bai tap len"
+    create_answer: "Loi gia da gui len"
+    find_by_class: "Tim theo lop hoc"
+    find_by_object: "Tim theo mon hoc"
+    class_1: "Lop 1"
+    math: "Toan"
+    create: "Tao cau hoi"
+    top_question: "Top cau hoi"
+    top_user: "Top nguoi tra loi"
+  text:
+    footer: "© 2017 Framgia-team-training"
+    logo: "logo"
+    reply: "reply"
+    grade: "grade"
+    visibility: "visibility"
+    thumb_up: "thumb_up"
+    search: "search"
+    close: "close"
+  link:
+    sign_out: "Dang xuat"
+    profile: "Trang ca nhan"
+  fake:
+    linh: "linh"
+    data:  "sublime de hay depho json socsialLearing ds"
+    question: "Đặt điện áp xoay chiều vào hai đầu đoạn mạch AB (chứa cuộn cảm
+      thuần) như hình vẽ thì thấy điện áp hai đầu đoạn mạch AN và MB lần
+      lượt là: U AN = 200cos(100πt - π/6)V và U MB = 200cos(100πt - π/3)V.
+      Biểu thức điện áp đặt vào hai đầu đoạn mạch AB là?"
+    subject: "vat ly - lop 10"
+    time: "22 minutes ago"
+    count: "234"

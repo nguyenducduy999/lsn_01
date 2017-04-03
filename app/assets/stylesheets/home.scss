@@ -1,0 +1,77 @@
+$white: #fff;
+.avatar {
+  .circle {
+    height: 50px;
+    vertical-align: middle;
+    width: 50px;
+  }
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.group-count {
+  strong {
+    vertical-align: super;
+  }
+}
+
+.space {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.padding-left-20 {
+  padding-left: 20px !important;
+}
+
+.header {
+  position: fixed;
+  z-index: 1;
+}
+
+.header-height {
+  height: 84px;
+}
+
+.left-sitebar {
+  color: $white;
+  position: fixed;
+
+  .card-panel {
+    padding: 10px;
+  }
+
+  .list-class {
+    margin-left: -11.25px;
+    margin-right: -11.25px;
+
+    .row {
+      display: none;
+    }
+  }
+
+}
+
+.right-sitebar {
+  .hot-user,
+  .hot-question {
+    .collection-item {
+      min-height: inherit;
+    }
+  }
+
+  .hot-question {
+    p {
+      margin-bottom: 0;
+      margin-top: 10px;
+    }
+  }
+}
+
+.list-question {
+  .avatar {
+    margin-top: 10px;
+  }
+}
