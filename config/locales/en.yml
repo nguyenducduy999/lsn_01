@@ -110,3 +110,6 @@ en:
   report: "Report"
   statistic: "Statistic"
   dashboard: "Dashboard"
+  search_for: "Search for"
+  search: "Search"
+  not_found: "Not found"
