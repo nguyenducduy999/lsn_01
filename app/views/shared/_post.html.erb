@@ -1,0 +1,5 @@
+<%= link_to "#", class: "collection-item" do %>
+  <span class="badge"><%= post.created_at %></span>
+  <span class="new badge" data-badge-caption="vote"><%= post.vote_count %></span>
+  <%= post.title %>
+<% end %>

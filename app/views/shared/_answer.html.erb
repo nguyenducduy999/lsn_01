@@ -1,0 +1,8 @@
+<%= link_to "#", class: "collection-item" do %>
+  <%= answer.question.title %><br>
+  <div class="content-answer-profile">
+    <%= answer.content %>
+    <span class="badge"><%= answer.created_at %></span>
+    <span class="new badge" data-badge-caption="vote"><%= answer.vote_count %></span>
+  </div>
+<% end %>
