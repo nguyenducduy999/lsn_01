@@ -1,0 +1,120 @@
+// Place all the styles related to the Admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$blue: #2c3e50;
+$blackcolor: #171717;
+$grey: #474747;
+$bluedark: #2980b9;
+$dark: #95a5a6;
+$verydark: #424242;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans';
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-admin {
+  background-color: $blue;
+  height: 55px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo {
+  float: left;
+  margin-left: 10px;
+  margin-top: 10px;
+
+  a {
+    font-size: 1.6em;
+
+    span {
+      font-weight: 300;
+    }
+  }
+}
+
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.sidebar {
+  background: $blackcolor;
+  float: left;
+  width: 250px;
+}
+
+.nav li {
+  list-style: none;
+
+  a {
+    display: block;
+    font-size: .8em;
+    padding: 10px;
+  }
+
+  a:hover {
+    background: $verydark;
+  }
+}
+
+.content {
+  background: $dark;
+  height: 100%;
+  margin-left: 250px;
+  padding: 15px;
+  width: auto;
+
+  p {
+    color: $verydark;
+  }
+}
+
+.box {
+  margin-top: 15px;
+
+  .box-top {
+    background: $bluedark;
+    font-weight: 300;
+    padding: 5px;
+    padding-left: 15px;
+    text-shadow: 0 1px;
+  }
+
+  .box-panel {
+    background: varcolor1;
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .sidebar {
+    display: none;
+    height: auto;
+    width: 100%;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+
+  .sidebar {
+    display: block;
+    min-height: 900px;
+  }
+}
