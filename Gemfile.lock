@@ -133,6 +133,8 @@ GEM
       ast (~> 2.2)
     powerpack (0.1.1)
     puma (3.8.2)
+    pundit (1.1.0)
+      activesupport (>= 3.0.0)
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -289,6 +291,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   materialize-sass
   puma (~> 3.0)
+  pundit
   rails (~> 5.0.2)
   rails-controller-testing
   rails_best_practices
